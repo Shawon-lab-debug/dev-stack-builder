@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import technologies from "../../data/technologies.json";
 import TechnologyCard from "../TechnologyCard/technologycard";
@@ -6,7 +6,16 @@ import Stack from "../Stack/Stack";
 import "./Technologies.css";
 
 function Technologies() {
+  const [loading, setLoading] = useState(true);
   const [stack, setStack] = useState([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleAdd = (technology) => {
     if (stack.some((item) => item.id === technology.id)) {
@@ -56,14 +65,21 @@ function Technologies() {
 
         <div className="technologies-layout">
           <div className="technology-grid">
-            {technologies.map((technology) => (
-              <TechnologyCard
-                key={technology.id}
-                technology={technology}
-                onAdd={handleAdd}
-                isAdded={stack.some((item) => item.id === technology.id)}
-              />
-            ))}
+            {loading ? (
+              <div className="loading">
+                <div className="loader"></div>
+                <p>Loading technologies...</p>
+              </div>
+            ) : (
+              technologies.map((technology) => (
+                <TechnologyCard
+                  key={technology.id}
+                  technology={technology}
+                  onAdd={handleAdd}
+                  isAdded={stack.some((item) => item.id === technology.id)}
+                />
+              ))
+            )}
           </div>
 
           <Stack

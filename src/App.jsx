@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Technologies from "./components/Technologies/Technologies";
+import Footer from "./components/Footer/footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <Technologies />
+      <Footer />
     </>
   );
 }
