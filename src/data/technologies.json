@@ -4,55 +4,55 @@
     "name": "React",
     "category": "Frontend",
     "description": "A JavaScript library for building user interfaces.",
-    "image": "/assets/react.png"
+    "image": "./public/assets/react.png"
   },
   {
     "id": 2,
     "name": "JavaScript",
     "category": "Frontend",
     "description": "A programming language for web development.",
-    "image": "/assets/javascript.png"
+    "image": "./public/assets/JavaScript.png"
   },
   {
     "id": 3,
     "name": "TypeScript",
     "category": "Frontend",
     "description": "A strongly typed programming language built on JavaScript.",
-    "image": "/assets/typescript.png"
+    "image": "./public/assets/typescript.png"
   },
   {
     "id": 4,
     "name": "Node.js",
     "category": "Backend",
     "description": "A JavaScript runtime for building server-side applications.",
-    "image": "/assets/nodejs.png"
+    "image": "./public/assets/Node.js.png"
   },
   {
     "id": 5,
     "name": "Next.js",
     "category": "Frontend",
     "description": "A React framework for building modern web applications.",
-    "image": "/assets/nextjs.png"
+    "image": "./public/assets/Next.js.png"
   },
   {
     "id": 6,
     "name": "Tailwind CSS",
     "category": "Frontend",
     "description": "A utility-first CSS framework for rapidly building interfaces.",
-    "image": "/assets/tailwind.png"
+    "image": "/assets/Tailwind CSS.png"
   },
   {
     "id": 7,
     "name": "PostgreSQL",
     "category": "Database",
     "description": "An advanced open-source relational database system.",
-    "image": "/assets/postgresql.png"
+    "image": "/assets/PostgreSQL.png"
   },
   {
     "id": 8,
     "name": "Docker",
     "category": "DevOps",
     "description": "A platform for developing, shipping, and running applications.",
-    "image": "/assets/docker.png"
+    "image": "/assets/Docker.png"
   }
 ]

@@ -50,6 +50,17 @@
   gap: 22px;
 }
 
+.technologies-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.technologies-layout .technology-grid {
+  width: 100%;
+}
+
 @media (max-width: 900px) {
   .technology-grid {
     grid-template-columns: repeat(2, 1fr);
