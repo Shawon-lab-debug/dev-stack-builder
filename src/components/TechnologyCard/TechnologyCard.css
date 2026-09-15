@@ -1,5 +1,6 @@
 .technology-card {
-  padding: 24px;
+  min-width: 0;
+  padding: 20px;
   border: 1px solid #eaecf0;
   border-radius: 16px;
   background: #ffffff;
@@ -7,59 +8,179 @@
 }
 
 .technology-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(16, 24, 40, 0.08);
+}
+
+.technology-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .technology-image {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 20px;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 11px;
   background: #f9fafb;
+  flex-shrink: 0;
 }
 
 .technology-image img {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 
+.technology-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-react {
+  color: #159bd7;
+  background: #effaff;
+}
+
+.badge-vue {
+  color: #12a36a;
+  background: #ecfdf3;
+}
+
+.badge-svelte {
+  color: #f97316;
+  background: #fff7ed;
+}
+
+.badge-nodejs {
+  color: #12a36a;
+  background: #ecfdf3;
+}
+
+.badge-postgresql {
+  color: #3578e5;
+  background: #eff6ff;
+}
+
+.badge-redis {
+  color: #f04438;
+  background: #fef3f2;
+}
+
+.badge-javascript {
+  color: #d88900;
+  background: #fffaeb;
+}
+
+.badge-typescript {
+  color: #159bd7;
+  background: #effaff;
+}
+
+.badge-java {
+  color: #159bd7;
+  background: #effaff;
+}
+
+.badge-tailwind {
+  color: #0891b2;
+  background: #ecfeff;
+}
+
+.badge-docker {
+  color: #159bd7;
+  background: #effaff;
+}
+
+.technology-content {
+  min-width: 0;
+}
+
 .technology-category {
-  display: inline-block;
-  margin-bottom: 8px;
+  display: block;
+  margin-bottom: 6px;
   color: #d4148e;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
 
 .technology-content h3 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #101828;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
 .technology-content p {
-  min-height: 48px;
-  margin-bottom: 20px;
+  min-height: 72px;
+  margin-bottom: 15px;
   color: #667085;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.6;
+}
+
+.technology-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 24px;
+  margin-bottom: 14px;
+}
+
+.difficulty {
+  display: inline-flex;
+  align-items: center;
+  max-width: 75%;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #f2f4f7;
+  color: #667085;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #667085;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.star {
+  color: #fdb022;
+  font-size: 12px;
 }
 
 .add-stack-btn {
   width: 100%;
-  padding: 11px 16px;
+  padding: 10px 14px;
   border: 1px solid #d0d5dd;
   border-radius: 8px;
   background: #ffffff;
   color: #344054;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
@@ -75,4 +196,66 @@
   background: #f9fafb;
   color: #98a2b3;
   cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .technology-card {
+    padding: 20px;
+  }
+
+  .technology-content h3 {
+    font-size: 17px;
+  }
+
+  .technology-content p {
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .technology-card {
+    padding: 20px;
+  }
+
+  .technology-card-top {
+    margin-bottom: 15px;
+  }
+
+  .technology-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .technology-image img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .technology-content h3 {
+    font-size: 18px;
+  }
+
+  .technology-content p {
+    min-height: auto;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .technology-category {
+    font-size: 10px;
+  }
+
+  .difficulty {
+    font-size: 10px;
+  }
+
+  .rating {
+    font-size: 11px;
+  }
+
+  .add-stack-btn {
+    padding: 11px 14px;
+    font-size: 12px;
+  }
 }

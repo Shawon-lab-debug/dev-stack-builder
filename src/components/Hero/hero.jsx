@@ -2,7 +2,7 @@ import "./Hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-container">
         <div className="hero-content">
           <p className="hero-tag">BUILD YOUR STACK</p>
@@ -30,13 +30,7 @@ function Hero() {
         </div>
 
         <div className="hero-image">
-          <div className="hero-image-box">
-            <div className="code-line"></div>
-            <div className="code-line short"></div>
-            <div className="code-line"></div>
-            <div className="code-line medium"></div>
-            <div className="code-line short"></div>
-          </div>
+          <img src="/assets/banner-stack.png" alt="Development Stack" />
         </div>
       </div>
     </section>

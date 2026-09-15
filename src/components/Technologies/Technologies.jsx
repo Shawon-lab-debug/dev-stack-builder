@@ -51,15 +51,12 @@ function Technologies() {
     <section className="technologies" id="technologies">
       <div className="technologies-container">
         <div className="section-heading">
-          <p>EXPLORE TECHNOLOGIES</p>
-
           <h2>
-            Choose Your <span>Tech Stack</span>
+            Explore the <span>Technologies</span>
           </h2>
 
           <p>
-            Explore popular technologies and build your personalized
-            development stack.
+            Pick one technology per category to build your ideal stack.
           </p>
         </div>
 

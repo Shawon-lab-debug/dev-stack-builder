@@ -1,5 +1,5 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/navbar";
+import Hero from "./components/Hero/hero";
 import Technologies from "./components/Technologies/Technologies";
 import Footer from "./components/Footer/footer";
 

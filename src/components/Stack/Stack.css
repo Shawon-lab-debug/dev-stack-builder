@@ -4,13 +4,15 @@
   border: 1px solid #eaecf0;
   border-radius: 16px;
   background: #ffffff;
+  box-sizing: border-box;
 }
 
 .stack-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 24px;
+  gap: 15px;
 }
 
 .stack-header p {
@@ -32,6 +34,7 @@
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .empty-stack {
@@ -69,6 +72,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .stack-item-info img {
@@ -78,6 +82,7 @@
   border-radius: 9px;
   background: #f9fafb;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .stack-item-info h4 {
@@ -101,4 +106,30 @@
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+  .stack {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .stack {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .stack-header {
+    margin-bottom: 18px;
+  }
+
+  .stack-header p {
+    font-size: 17px;
+  }
+
+  .stack-item {
+    padding: 12px 0;
+  }
 }
