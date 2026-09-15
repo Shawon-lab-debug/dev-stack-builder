@@ -8,6 +8,12 @@ function Navbar() {
     setMenuOpen(false);
   };
 
+  const openMenu = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setMenuOpen(true);
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -16,9 +22,7 @@ function Navbar() {
         </a>
 
         <nav className="navbar-links">
-          <a href="#home" className="active">
-            Home
-          </a>
+          <a href="#home" className="active">Home</a>
           <a href="#technologies">Technologies</a>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
@@ -26,13 +30,20 @@ function Navbar() {
         </nav>
 
         <div className="navbar-actions">
-          <button className="sign-in">Sign In</button>
-          <button className="sign-up">Sign Up</button>
+          <button type="button" className="sign-in">
+            Sign In
+          </button>
+
+          <button type="button" className="sign-up">
+            Sign Up
+          </button>
 
           <button
+            type="button"
             className="hamburger-btn"
-            onClick={() => setMenuOpen(true)}
+            onPointerDown={openMenu}
             aria-label="Open menu"
+            aria-expanded={menuOpen}
           >
             <span></span>
             <span></span>
@@ -43,7 +54,7 @@ function Navbar() {
 
       {menuOpen && (
         <>
-          <div className="menu-overlay" onClick={closeMenu}></div>
+          <div className="menu-overlay" onPointerDown={closeMenu}></div>
 
           <aside className="mobile-drawer">
             <div className="drawer-header">
@@ -52,8 +63,9 @@ function Navbar() {
               </a>
 
               <button
+                type="button"
                 className="close-btn"
-                onClick={closeMenu}
+                onPointerDown={closeMenu}
                 aria-label="Close menu"
               >
                 ×
@@ -61,21 +73,11 @@ function Navbar() {
             </div>
 
             <nav className="drawer-links">
-              <a href="#home" onClick={closeMenu}>
-                Home
-              </a>
-              <a href="#technologies" onClick={closeMenu}>
-                Technologies
-              </a>
-              <a href="#projects" onClick={closeMenu}>
-                Projects
-              </a>
-              <a href="#about" onClick={closeMenu}>
-                About
-              </a>
-              <a href="#contact" onClick={closeMenu}>
-                Contact
-              </a>
+              <a href="#home" onClick={closeMenu}>Home</a>
+              <a href="#technologies" onClick={closeMenu}>Technologies</a>
+              <a href="#projects" onClick={closeMenu}>Projects</a>
+              <a href="#about" onClick={closeMenu}>About</a>
+              <a href="#contact" onClick={closeMenu}>Contact</a>
             </nav>
           </aside>
         </>

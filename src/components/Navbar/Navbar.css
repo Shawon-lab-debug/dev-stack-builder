@@ -93,6 +93,8 @@
 
 .hamburger-btn {
   display: none;
+  position: relative;
+  z-index: 1003;
   width: 38px;
   height: 38px;
   padding: 8px;
@@ -103,6 +105,8 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger-btn span {
@@ -111,6 +115,7 @@
   height: 2px;
   border-radius: 2px;
   background: #101828;
+  pointer-events: none;
 }
 
 .menu-overlay {
@@ -118,6 +123,7 @@
   inset: 0;
   z-index: 1001;
   background: rgba(16, 24, 40, 0.35);
+  touch-action: manipulation;
 }
 
 .mobile-drawer {
@@ -128,9 +134,12 @@
   width: 300px;
   max-width: 85%;
   height: 100vh;
+  height: 100dvh;
   padding: 24px 20px;
   background: #ffffff;
   box-shadow: -10px 0 30px rgba(16, 24, 40, 0.15);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .drawer-header {
@@ -156,6 +165,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1004;
   width: 36px;
   height: 36px;
   padding: 0;
@@ -166,6 +177,8 @@
   font-size: 27px;
   line-height: 1;
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .drawer-links {
@@ -182,14 +195,13 @@
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 .drawer-links a:hover {
   background: #f9fafb;
   color: #d4148e;
 }
-
-/* Tablet */
 
 @media (max-width: 900px) {
   .navbar-container {
@@ -208,8 +220,6 @@
     gap: 12px;
   }
 }
-
-/* Mobile */
 
 @media (max-width: 768px) {
   .navbar {
@@ -236,6 +246,8 @@
   }
 
   .navbar-actions {
+    position: relative;
+    z-index: 1003;
     margin-left: auto;
     gap: 7px;
   }
@@ -253,8 +265,6 @@
     display: flex;
   }
 }
-
-/* Small mobile */
 
 @media (max-width: 430px) {
   .navbar-logo img {
@@ -284,8 +294,6 @@
     width: 20px;
   }
 }
-
-/* Very small mobile */
 
 @media (max-width: 350px) {
   .navbar-logo img {
