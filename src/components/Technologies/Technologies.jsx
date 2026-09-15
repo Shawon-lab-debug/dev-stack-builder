@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import technologies from "../../data/technologies.json";
-import TechnologyCard from "../TechnologyCard/technologycard";
+import TechnologyCard from "../TechnologyCard/TechnologyCard";
 import Stack from "../Stack/Stack";
 import "./Technologies.css";
 
