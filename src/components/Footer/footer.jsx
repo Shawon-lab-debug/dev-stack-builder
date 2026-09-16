@@ -49,7 +49,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 Dev Stack. All rights reserved.</p>
+          <p>© 2026 Dev Stack. All rights reserved by Dev Stack</p>
 
           <div>
             <a href="#">Privacy</a>
