@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import technologies from "../../data/technologies.json";
-import TechnologyCard from "../TechnologyCard/TechnologyCard";
+import TechnologyCard from "../TechnologyCard/technologycard";
 import Stack from "../Stack/Stack";
 import "./Technologies.css";
 
@@ -73,7 +73,9 @@ function Technologies() {
                   key={technology.id}
                   technology={technology}
                   onAdd={handleAdd}
-                  isAdded={stack.some((item) => item.id === technology.id)}
+                  isAdded={stack.some(
+                    (item) => item.id === technology.id
+                  )}
                 />
               ))
             )}
@@ -87,7 +89,16 @@ function Technologies() {
         </div>
       </div>
 
-      <ToastContainer position="top-right" autoClose={2000} />
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        toastStyle={{
+          maxWidth: "calc(100vw - 30px)"
+        }}
+      />
     </section>
   );
 }

@@ -2,6 +2,7 @@
   width: 100%;
   padding: 90px 0 100px;
   background: #f9fafb;
+  overflow: hidden;
 }
 
 .technologies-container {
@@ -42,6 +43,8 @@
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 24px;
   align-items: start;
+  width: 100%;
+  min-width: 0;
 }
 
 .technology-grid {
@@ -49,6 +52,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   width: 100%;
+  min-width: 0;
 }
 
 .loading {
@@ -98,10 +102,14 @@
   }
 
   .technologies-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
   }
 
   .technology-grid {
+    width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -110,7 +118,9 @@
   }
 
   .stack {
+    order: 2;
     width: 100%;
+    min-width: 0;
   }
 }
 
@@ -121,6 +131,7 @@
 
   .technologies-container {
     width: 92%;
+    max-width: none;
   }
 
   .section-heading {
@@ -136,18 +147,22 @@
     font-size: 13px;
   }
 
+  .technologies-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
   .technology-grid {
+    width: 100%;
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  .technologies-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .stack {
     order: 2;
+    width: 100%;
+    min-width: 0;
   }
 }
